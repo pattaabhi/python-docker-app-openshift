@@ -10,7 +10,7 @@ node{
     }
    
    stage("Tag & Push image"){
-      withDockerRegistry([credentialsId: 'Github-ID', url: 'https://hub.docker.com']) {
+      withDockerRegistry([credentialsId: 'DockerID', url: 'https://hub.docker.com']) {
           sh 'docker tag manee2k6/pattabiapp manee2k6/pattabiapp:001'
           sh 'docker push manee2k6/pattabiapp:001'
           sh 'docker push manee2k6/pattabiapp:latest'
