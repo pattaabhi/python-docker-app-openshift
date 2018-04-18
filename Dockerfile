@@ -1,6 +1,8 @@
 # Use an official Python runtime as a parent image
 FROM python:3.6.5-alpine3.7
 
+USER root
+
 MAINTAINER MANIVANNAN.C
 # Set the working directory to /app
 WORKDIR /app
@@ -17,5 +19,6 @@ EXPOSE 80
 # Define environment variable
 ENV NAME World
 
+User root
 # Run app.py when the container launches
 CMD ["python", "app.py"]
